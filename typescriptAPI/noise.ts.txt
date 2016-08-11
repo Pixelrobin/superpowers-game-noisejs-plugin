@@ -7,26 +7,20 @@
 
 declare var noise;
 
-namespace Sup {
+namespace Noise {
 
-  export namespace Math {
+  var noiseSeed = 0;
 
-    export namespace Noise {
+  export function seed( seed: number ): void   { noise.seed( seed ); noiseSeed = seed; }
+  export function makeRandomSeed():     void   { noiseSeed = window.Math.random(); noise.seed( noiseSeed ); }
+  export function getSeed():            number { return noiseSeed; }
 
-      var noiseSeed = 0;
+  export function simplex2d( x: number, y: number ):            number { return noise.simplex2( x, y ); }
+  export function simplex3d( x: number, y: number, z: number ): number { return noise.simplex3( x, y, z ); }
 
-      export function seed( seed: number ): void   { noise.seed( seed ); noiseSeed = seed; }
-      export function makeRandomSeed():     void   { noiseSeed = window.Math.random(); noise.seed( noiseSeed ); }
-      export function getSeed():            number { return noiseSeed; }
-
-      export function simplex2( x: number, y: number ):            number { return noise.simplex2( x, y ); }
-      export function simplex3( x: number, y: number, z: number ): number { return noise.simplex3( x, y, z ); }
-
-      export function perlin2( x: number, y: number ):            number { return noise.perlin2( x, y ); }
-      export function perlin3( x: number, y: number, z: number ): number { return noise.perlin3( x, y, z ); }
-
-    }
-
-  }
+  export function perlin2d( x: number, y: number ):            number { return noise.perlin2( x, y ); }
+  export function perlin3d( x: number, y: number, z: number ): number { return noise.perlin3( x, y, z ); }
 
 }
+
+window.Noise = Noise;

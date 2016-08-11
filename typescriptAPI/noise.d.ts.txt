@@ -5,7 +5,7 @@
  * 
  */
 
-declare namespace Sup { export namespace Math { export namespace Noise {
+declare namespace Noise {
 
 	// Set the seed ( float between 0 and 1 or integer between 1 and 65536 )
 	export function seed( seed: number ): void;
@@ -13,11 +13,11 @@ declare namespace Sup { export namespace Math { export namespace Noise {
 	export function getSeed():            number;
 
 	// Simplex noise
-	export function simplex2( x: number, y: number ):            number;
-	export function simplex3( x: number, y: number, z: number ): number;
+	export function simplex2d( x: number, y: number ):            number;
+	export function simplex3d( x: number, y: number, z: number ): number;
 
 	// Perlin noise
-	export function perlin2( x: number, y: number ):            number;
-	export function perlin3( x: number, y: number, z: number ): number;
+	export function perlin2d( x: number, y: number ):            number;
+	export function perlin3d( x: number, y: number, z: number ): number;
 
-}}}
+}
