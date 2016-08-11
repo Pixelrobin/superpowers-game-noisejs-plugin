@@ -1,0 +1,32 @@
+/*
+* Built on noisejs by josephg
+* Superpower-ified (Superpowered?) by pixelrobin
+* https://github.com/josephg/noisejs
+*
+*/
+
+declare var noise;
+
+namespace Sup {
+
+  export namespace Math {
+
+    export namespace Noise {
+
+      var noiseSeed = 0;
+
+      export function seed( seed: number ): void   { noise.seed( seed ); noiseSeed = seed; }
+      export function makeRandomSeed():     void   { noiseSeed = window.Math.random(); noise.seed( noiseSeed ); }
+      export function getSeed():            number { return noiseSeed; }
+
+      export function simplex2( x: number, y: number ):            number { return noise.simplex2( x, y ); }
+      export function simplex3( x: number, y: number, z: number ): number { return noise.simplex3( x, y, z ); }
+
+      export function perlin2( x: number, y: number ):            number { return noise.perlin2( x, y ); }
+      export function perlin3( x: number, y: number, z: number ): number { return noise.perlin3( x, y, z ); }
+
+    }
+
+  }
+
+}

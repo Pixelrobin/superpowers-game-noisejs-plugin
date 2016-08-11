@@ -1,0 +1,7 @@
+{
+  "name": "superpowers-game-noisejs-plugin",
+  "description": "noisejs plugin for Superpowers Game",
+  "scripts": {
+    "build": "gulp --gulpfile=../../../../../scripts/pluginGulpfile.js --cwd=."
+  }
+}
