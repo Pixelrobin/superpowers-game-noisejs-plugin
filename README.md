@@ -1,6 +1,6 @@
 
 # superpowers-game-noisejs-plugin
-[Noisejs](https://github.com/josephg/noisejs) plugin for Superpowers Game.
+[Noisejs](https://github.com/josephg/noisejs) plugin for [Superpowers Game](https://github.com/superpowers/superpowers-game).
 
 ![Example game scene with minecraft-like blocks](superpowers-noisejs.gif)
 
