@@ -4,7 +4,7 @@
 
 ![Example game scene with minecraft-like blocks](superpowers-noisejs.gif)
 
-### Installation on Windows
+## Installation on Windows
 Use the following commands
 ```
 cd %appdata%\Superpowers\systems\game\plugins\extra
@@ -12,12 +12,12 @@ git clone --recursive https://github.com/Pixelrobin/superpowers-game-noisejs-plu
 ```
 Currently not tested on mac or linux. If anyone is willing to share how to install on those platforms, please open a PR!
 
-### Demo project
+## Demo project
 The repository contains a little demo project with minecraft-like terrain generation. Just copy the `noisejs-demo` folder from `project\demo.zip` to your superpowers project directory. Make sure you installed the plugin.
 
 On Windows, in a typical installation, your projects folder is located under `%appdata%\Superpowers\projects` and if you followed the directions above, the plugin should be installed in `%appdata%\Superpowers\systems\game\plugins\extra\` as the folder `noisejs`.
 
-### Usage
+## Usage
 ``` Typescript
 // Set the seed of the noise ( float between 0 and 1 or integer between 1 and 65536 )
 Noise.seed( seed: number ): void
@@ -37,7 +37,7 @@ Noise.perlin2d( x: number, y: number ): number            // 2D
 Noise.perlin3d( x: number, y: number, z: number ): number // 3D
 ```
 
-### Example
+## Example
 ``` Typescript
 // Taken and adapted from the original noisejs repo
 
@@ -58,3 +58,8 @@ for (var x = 0; x < width; x ++) {
   }
 }
 ```
+
+## License
+This project is licensed under the [MIT License](https://github.com/Pixelrobin/superpowers-game-noisejs-plugin/blob/master/LICENSE).
+
+It includes code from josephg/noisejs, which is licensed under the [ISC License](https://github.com/josephg/noisejs/blob/master/LICENSE)
