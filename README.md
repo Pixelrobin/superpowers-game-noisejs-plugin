@@ -1,18 +1,22 @@
 
 # superpowers-game-noisejs-plugin
-Noisejs plugin for Superpowers Game (https://github.com/josephg/noisejs).
+[Noisejs](https://github.com/josephg/noisejs) plugin for Superpowers Game.
 
+![Example game scene with minecraft-like blocks](superpowers-noisejs.gif)
 
 ### Installation on Windows
-Open the command prompt (Windows key + R, type in cmd, press enter) and type the following commands
+Use the following commands
 ```
 cd %appdata%\Superpowers\systems\game\plugins\extra
 git clone --recursive https://github.com/Pixelrobin/superpowers-game-noisejs-plugin noisejs
 ```
-I'm not sure how to do this on Mac or Linux (sorry) 
+Currently not tested on mac or linux. If anyone is willing to share how to install on those platforms, please open a PR!
+
 ### Demo project
-The repository contains a little demo project with minecraft-like terrain generation. I probably spent too much time on it :p. Just copy the `noisejs-demo` folder from `project\demo.zip` to your superpowers project directory. Obviously, you need to have the plugin installed in order to use it. In a typical installation, your projects folder is located under `%appdata%\Superpowers\projects` and if you followed the directions above, the plugin should be installed in `%appdata%\Superpowers\systems\game\plugins\extra\` as the folder `noisejs`.
-[Here's a gif](http://imgur.com/a/WI7C0).
+The repository contains a little demo project with minecraft-like terrain generation. Just copy the `noisejs-demo` folder from `project\demo.zip` to your superpowers project directory. Make sure you installed the plugin.
+
+On Windows, in a typical installation, your projects folder is located under `%appdata%\Superpowers\projects` and if you followed the directions above, the plugin should be installed in `%appdata%\Superpowers\systems\game\plugins\extra\` as the folder `noisejs`.
+
 ### Usage
 ``` Typescript
 // Set the seed of the noise ( float between 0 and 1 or integer between 1 and 65536 )
